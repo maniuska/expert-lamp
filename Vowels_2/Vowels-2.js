@@ -5,17 +5,14 @@ var testString = prompt('Введите, пожалуйста, строку:', '
 // вариант #1: "forEach"
 function count1 (str) {
   str = str.toLowerCase().split(""); 
+  var counter = 0;
   function countRussianVowels1(v, i, args) {
     var vowels = {а:0, о: 0, у:0, ы:0, э:0, и:0, е:0, ё:0, ю:0, я:0};
-    // при первой итерации добавляем в конец массива элемент, 
-    // который будет счетчиком гласных:  
-    if (i===0)
-      args[args.length] = 0;  
     if (v in vowels)
-      args[args.length-1]++;
+    counter ++; 
   } 
   str.forEach(countRussianVowels1); 
-  return str[str.length-1];
+  return counter;
 }
 console.log("№1. Количество гласных букв = " + count1(testString));  
 
