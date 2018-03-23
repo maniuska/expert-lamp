@@ -5,7 +5,7 @@
 все начальные и конечные пробелы, не используя метод строки trim.
 Если умеете работать с регулярными выражениям - не используйте и их :)*/
 
-var str = "      jtfkgfl   ";
+var str = "  ff  ";
 
 function myTrim(arg){
   var counter=0;
@@ -14,9 +14,9 @@ function myTrim(arg){
   arg = arg.substr(counter);
 
   counter = 0;    
-  for (var i=arg.length-1; (arg[i] == " "&& i>=0); i++)
+  for (var i=arg.length-1; (arg[i] == " "&& i>=0); i--)
     counter++;  
-  arg = arg.substr(0, arg.length-2-counter);
+  arg = arg.substr(0, arg.length-counter);
   
   return arg;
 }
