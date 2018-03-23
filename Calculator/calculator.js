@@ -1,26 +1,8 @@
 'use strict';
 
-var str = '-(2.02+3.0*((-4.0001-3)/3+6+101))';
-console.log('Вычисляем выражение: ' + str);
+//var str = '-(2.02+3.0*((-4.0001-3)/3+6+101))';
+//console.log('Вычисляем выражение: ' + str);
 
-// разбиваем строку на массив из операторов и операндов
-var arr = [];
-for (var i = 0, k = -1; i < str.length; i++) {
-	if (str[i] == '+' ||
-		str[i] == '-' ||
-		str[i] == '*' ||
-		str[i] == '/' ||
-		str[i] == ')' ||
-		str[i] == '(') {
-        if (k + 1 !== i) 
-            arr.push(str.slice(k + 1, i));
-		arr.push(str[i]);
-		k = i;
-    } else if (i == str.length - 1) 
-        arr.push(str.slice(k + 1, str.length)); // добавляем в массив последний операнд
-}
-
-console.log(calculate(arr));
 
 function calculate(arr) {
 	//проверяем на наличие скобок, вычисляем выражения в скобках
