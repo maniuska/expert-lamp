@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>Match-Match Game</title>
+    <link rel='stylesheet' type='text/css' href=css/style.css>
+    
+</head>
+<body>
+    <header>
+        <h1>Match-Match Game</h1>
+        <nav>
+            <input class="new_game button_r" type="button" name="newGame" value="New Game">
+            <input class="rec_bot button_r" type="button" name="bestRes" value="Best Results">
+        </nav>
+    </header>
+    <main>
+        <section id="start_block">
+            <h2>Здравствуй, уважаемый игрок!</h2>
+            <p>Для начала игры введите личные данные. После нажатия кнопки "Start" перед Вами появится поле с картами. 
+                При нажатии на любую карту будет показано ее значение. Вам необходимо найти вторую карту с таким же значением.</p>    
+                <p><label><b>Ваше имя:</b><br><input type="text" name="first_name"></label><br></p>
+                <p><label><b>Ваша фамилия:</b><br> <input type="text" name="last_name"></label><br></p>
+                <p><label><b>Email:</b><br> <input type="email" name="email"></label><br></p>
+                <p><b>Вид рубашек карт:</b><p> 
+                <label><input name="card_type" type="radio" value="letters" checked>Буквы</label>
+                <label><input name="card_type" type="radio" value="digits">Цифры</label>
+                <p><b>Количество карт:</b><p> 
+                    <label><input name="level" type="radio" value=1>2X2</label><br>
+                    <label><input name="level" type="radio" value=2 checked>4X4</label><br>
+                    <label><input name="level" type="radio" value=3>6X6</label><br>
+                    <br>
+                <input id="start" type="button" value="Start" class="button"><br><br><br>
+               
+        </section>    
+        <section id="game_block" class="hidden">
+            <div>
+                <div id='timer'>"Затрачено: 0 часов 0 минут 0 секунд"</div> 
+            </div>    
+            <div id="msgField">
+            </div>
+            <div>
+                <table id='table'>
+                </table>
+            </div>
+        </section> 
+        <section id="results_block" class="hidden" >
+         
+        </section><br><br><br>
+        <audio id="onFlip">
+            <source src="http://fe.it-academy.by/Examples/Sounds/button-16.ogg" type="audio/ogg">
+            <source src="http://fe.it-academy.by/Examples/Sounds/button-16.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <audio id="onHidingCards">
+            <source src="http://www.mcello63.com/suonerie_varie/ScivoloSu.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <audio id="onWin">
+            <source src="audio/TaDa.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>             
+    </main>    
+    <footer>Made by maniuska 2018</footer>
+    <script type='text/javascript' src=javascript/match-match-game.js></script>
+    <script src="http://fe.it-academy.by/JQ/jquery.js"></script>
+</body>

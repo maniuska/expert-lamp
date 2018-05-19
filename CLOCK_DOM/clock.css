@@ -1,0 +1,29 @@
+body{
+    margin:0px;
+}
+#orange {
+    border-radius: 50%;
+    background: #FFC95D;
+    width: 200px;
+    height: 200px;
+}
+
+.green {
+    border-radius: 50%;
+    background: greenyellow;
+    width: 30px;
+    height: 30px;  
+    position: absolute;
+}
+
+#hour_hand {
+    border-radius: 20%;
+    background: black;
+    width: 8px;
+    height: 60px;
+    position: absolute;
+}
+
+.hours {
+    padding: 6px;
+}
